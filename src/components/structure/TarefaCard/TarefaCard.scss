@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
+
 .card {
+  font-family: "Montserrat", sans-serif;
   margin: 35px 10px 10px 50px;
   padding: 1rem;
   width: 25%;
@@ -11,4 +14,8 @@
   box-shadow: rgba(61, 60, 61, 0.4) 5px 5px, rgba(61, 60, 61, 0.3) 10px 10px,
     rgba(61, 60, 61, 0.2) 15px 15px, rgba(61, 60, 61, 0.1) 20px 20px,
     rgba(61, 60, 61, 0.05) 25px 25px;
+}
+.card p {
+  margin-top: 8 px;
+  padding-bottom: 8px;
 }
