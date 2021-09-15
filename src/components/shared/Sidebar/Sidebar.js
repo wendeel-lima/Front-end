@@ -18,24 +18,9 @@ const Sidebar = () => {
 
           <li>
             <Link to="/add">
-              <span className="links_name">Cadastar</span>
+              <span className="links_name">Cadastrar</span>
             </Link>
           </li>
-          <li>
-            <Link to="/view">
-              <span className="links_name">Tarefas</span>
-            </Link>
-          </li>
-          {/* <li>
-            <Link href="#">
-              <span className="links_name">User</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="#">
-              <span className="links_name">Setting</span>
-            </Link> 
-          </li>*/}
         </ul>
       </div>
     </div>

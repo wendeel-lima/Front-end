@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./TarefaEdit.scss";
+import { Link } from "react-router-dom";
 import { Api } from "../../api/api";
 
 const TarefaEdit = (props) => {
@@ -102,12 +103,10 @@ const TarefaEdit = (props) => {
             </div>
 
             <div className="add-form-buttons">
-              <button className="add-form-buttons-btn-cancelar">
-                Cancelar
-              </button>
-              <button className="add-form-buttons-btn-salvar" type="submit">
-                Enviar
-              </button>
+              <Link to="/" className="link-button">
+                <button>Cancelar</button>
+              </Link>
+              <button type="submit">Enviar</button>
             </div>
           </form>
         </section>
