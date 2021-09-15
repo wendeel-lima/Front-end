@@ -27,31 +27,36 @@ const TarefaView = (props) => {
   };
 
   return (
-    <div className="viewer">
-      <p>
-        <b>Titulo:</b> {tarefa.titulo}
-      </p>
-      <p>
-        <b>Descrição:</b> {tarefa.descrição}
-      </p>
-      <p>
-        <b>Prioridade:</b> {tarefa.prioridade}
-      </p>
-      <p>
-        <b>Status:</b> {tarefa.status}
-      </p>
-      <p>
-        <b>Prazo:</b> {tarefa.prazo}
-      </p>
-      <p>
-        <b>Data Criacao:</b> {tarefa.dataCriacao}
-      </p>
-      <Link to={`/edit/${tarefa._id}`}>
-        <button className="btn btn-success">Editar</button>
-      </Link>
-      <button onClick={handleDelete} className="btn btn-danger">
-        Excluir
-      </button>
+    <div className="header">
+      <h2>Visualisar</h2>
+      <div>
+        <div className="viewer">
+          <p>
+            <b>Titulo:</b> {tarefa.titulo}
+          </p>
+          <p>
+            <b>Descrição:</b> {tarefa.descrição}
+          </p>
+          <p>
+            <b>Prioridade:</b> {tarefa.prioridade}
+          </p>
+          <p>
+            <b>Status:</b> {tarefa.status}
+          </p>
+          <p>
+            <b>Prazo:</b> {tarefa.prazo}
+          </p>
+          <p>
+            <b>Data Criacao:</b> {tarefa.dataCriação}
+          </p>
+          <Link to={`/edit/${tarefa._id}`}>
+            <button className="btn btn-success">Editar</button>
+          </Link>
+          <button onClick={handleDelete} className="btn btn-danger">
+            Excluir
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

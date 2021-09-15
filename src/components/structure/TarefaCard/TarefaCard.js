@@ -12,6 +12,7 @@ const TarefaCard = (props) => {
       <p>{tarefa.prioridade}</p>
       <p>{tarefa.status}</p>
       <p>{tarefa.prazo}</p>
+      <p>{tarefa.dataCriação}</p>
 
       <Link to={`/view/${tarefa._id}`}>
         <button>View</button>

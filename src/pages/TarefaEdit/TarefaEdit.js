@@ -31,10 +31,10 @@ const TarefaEdit = (props) => {
   };
 
   return (
-    <div className="edit">
+    <div className="header">
+      <h2>Editar Tarefa</h2>
       <div>
-        <section>
-          <h1>Editar - Tarefa</h1>
+        <section className="edit">
           <form onSubmit={handleSubmit}>
             <div>
               <label htmlFor="titulo">Titulo:</label>
