@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./TarefaEdit.scss";
 import { Api } from "../../api/api";
 
 const TarefaEdit = (props) => {
@@ -30,68 +31,88 @@ const TarefaEdit = (props) => {
   };
 
   return (
-    <section className="add">
-      <h1>Editar - Tarefa</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="titulo">Titulo:</label>
-          <input
-            type="text"
-            id="titulo"
-            name="titulo"
-            value={fields.titulo}
-            onChange={handleFieldsChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="descrição">Descrição:</label>
-          <input
-            type="text"
-            id="descrição"
-            name="descrição"
-            value={fields.descrição}
-            onChange={handleFieldsChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="prioridade">Prioridade:</label>
-          <input
-            type="text"
-            id="prioridade"
-            name="prioridade"
-            value={fields.prioridade}
-            onChange={handleFieldsChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="status">Status:</label>
-          <input
-            type="text"
-            id="status"
-            name="status"
-            value={fields.status}
-            onChange={handleFieldsChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="prazo">Prazo:</label>
-          <input
-            type="text"
-            id="prazo"
-            name="prazo"
-            value={fields.prazo}
-            onChange={handleFieldsChange}
-          />
-        </div>
+    <div className="edit">
+      <div>
+        <section>
+          <h1>Editar - Tarefa</h1>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor="titulo">Titulo:</label>
+              <input
+                type="text"
+                id="titulo"
+                name="titulo"
+                value={fields.titulo}
+                onChange={handleFieldsChange}
+              />
+            </div>
+            <div>
+              <label htmlFor="descrição">Descrição:</label>
+              <input
+                type="text"
+                id="descrição"
+                name="descrição"
+                value={fields.descrição}
+                onChange={handleFieldsChange}
+              />
+            </div>
+            <div>
+              <label htmlFor="prazo">Prazo:</label>
+              <input
+                type="text"
+                id="prazo"
+                name="prazo"
+                value={fields.prazo}
+                onChange={handleFieldsChange}
+              />
+            </div>
+            <div>
+              <fieldset htmlFor="prioridade">
+                <legend id="prioridade" name="prioridade">
+                  Prioridade:
+                </legend>
+                <select
+                  htmlFor="prioridade"
+                  id="prioridade"
+                  name="prioridade"
+                  value={fields.prioridade}
+                  onChange={handleFieldsChange}
+                >
+                  <option value="Baixa">Baixa</option>
+                  <option value="Media">Media</option>
+                  <option value="Alta">Alta</option>
+                </select>
+              </fieldset>
+            </div>
+            <div>
+              <fieldset htmlFor="status">
+                <legend>Status:</legend>
+                <select
+                  htmlFor="status"
+                  id="status"
+                  name="status"
+                  value={fields.status}
+                  onChange={handleFieldsChange}
+                >
+                  <option value="Fazer">Fazer</option>
+                  <option value="Fazendo">Fazendo</option>
+                  <option value="Feito">Feito</option>
+                </select>
+              </fieldset>
+            </div>
 
-        <div className="add-form-buttons">
-          <button className="add-form-buttons-btn-cancelar">Cancelar</button>
-          <button className="add-form-buttons-btn-salvar" type="submit">
-            Enviar
-          </button>
-        </div>
-      </form>
-    </section>
+            <div className="add-form-buttons">
+              <button className="add-form-buttons-btn-cancelar">
+                Cancelar
+              </button>
+              <button className="add-form-buttons-btn-salvar" type="submit">
+                Enviar
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
   );
 };
 
