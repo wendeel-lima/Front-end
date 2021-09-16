@@ -104,9 +104,9 @@ const TarefaEdit = (props) => {
 
             <div className="add-form-buttons">
               <Link to="/" className="link-button">
-                <button>Cancelar</button>
+                <button>Concluir edição</button>
               </Link>
-              <button type="submit">Enviar</button>
+              <button type="submit">Editar</button>
             </div>
           </form>
         </section>
